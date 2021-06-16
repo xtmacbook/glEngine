@@ -1,0 +1,33 @@
+
+#gitingnore
+#.gitignore
+
+#generate resource.h
+
+# Cmake native output.
+cmake/build
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+#vs native output
+*.vcxproj
+*.vcxproj.*
+*.sln
+*.opendb
+*.VC.db
+Win32/
+libengine.dir/
+.vs/
+vc/
+Debug/
+
+log.txt
+CMakeSettings.json
+
+##Xcode
+*.xcdoeproj
+*.build
+*.DS_Store
+*xcodeproj*
+CMakeScripts/
