@@ -29,6 +29,16 @@ target_link_libraries(NvmultriDrawIndirect ${engineName})
 install(TARGETS NvmultriDrawIndirect RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 
+# ================================================= download===================================================================================
 
-
-
+set(Download_Source_Files download.cpp)
+add_executable(download ${Download_Source_Files})
+add_dependencies(download ${engineName})
+source_group("Source Files" FILES ${deferred_Source_Files})
+set_target_properties(download PROPERTIES PROJECT_LABEL "download")						# in Visual Studio
+set_target_properties(download PROPERTIES OUTPUT_NAME "download")
+set_target_properties(download PROPERTIES FOLDER "examples/optimization")
+target_link_libraries(download ${engineName}) 
+ 
+#install
+install(TARGETS download RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
